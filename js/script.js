@@ -2,18 +2,24 @@
 
 'use strict';
 /**
- * This function converts fahrenheit to celsius.
+ * This function creates a random number for the user to try to guess and then output whether or not the user got it right.
  */
 function reveal() {
+  
   // Variables
-  let guess = parseInt(document.getElementById('guess').value) // Stores value from user
+  let guess = parseInt(document.getElementById('guess').value) // Makes variable an integer
+  // Creates random number
   let answer = Math.floor((Math.random() * 6) + 1)
+
+  // Output messages if the user got it or not
   let winMsg = "You guessed correctly! The number was " + answer;
   let loseMsg = "You guessed incorrectly... The correct answer was " + answer;
 
+  // IF statement, if the user guessed correctly
   if (guess == answer) {
     document.getElementById('answer').innerHTML = winMsg
     document.getElementById('incorrect-answer').innerHTML = ""
+    // If the user did not guess correctly
   } else {
     document.getElementById('incorrect-answer').innerHTML = loseMsg
     document.getElementById('answer').innerHTML = ""
