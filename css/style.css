@@ -18,7 +18,6 @@ th {
 }
 
 /* Centered Div using flexbox */
-
 .mdl-layout-title {
 	display: flex;
 	justify-content: center;

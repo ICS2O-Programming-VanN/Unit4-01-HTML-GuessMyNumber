@@ -5,11 +5,14 @@
  * This function creates a random number for the user to try to guess and then output whether or not the user got it right.
  */
 function reveal() {
+  // Constants
+  const MAX = 6;
+  const MIN = 1;
   
   // Variables
   let guess = parseInt(document.getElementById('guess').value) // Makes variable an integer
   // Creates random number
-  let answer = Math.floor((Math.random() * 6) + 1)
+  let answer = Math.floor((Math.random() * MAX) + MIN)
 
   // Output messages if the user got it or not
   let winMsg = "You guessed correctly! The number was " + answer;
